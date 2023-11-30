@@ -1,0 +1,21 @@
+.row{
+    display: block;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: hsl(0, 0%, 80%);
+    padding: 1rem;
+    border: 2px solid #3158a5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    max-width: 90%;
+    margin: 12px auto;
+    z-index: 1;
+}
+
+.row p {
+    font-size: 16px;
+  
+}
