@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { ToastContainer } from "react-toastify";
 import { FluidContainer } from "../../../Components/FluidContainer/FluidContainer";
-import WebXploreSubmissionsPage from "../../../Components/WebXploreSubmissionsPage";
+// import WebXploreSubmissionsPage from "../../../Components/WebXploreSubmissionsPage";
 
 function WebXploreSubmissions() {
 
@@ -17,7 +17,7 @@ function WebXploreSubmissions() {
       </Head>
       {/* <FluidContainer /> */}
       <ToastContainer />
-      <WebXploreSubmissionsPage />
+      {/* <WebXploreSubmissionsPage /> */}
     </>
   );
 }

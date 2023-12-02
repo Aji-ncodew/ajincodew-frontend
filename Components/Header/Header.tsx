@@ -3,14 +3,13 @@ import Image from "next/image";
 import NSCCLogo from "../../assets/logo.png";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { auth } from "../../firebase";
-import { onAuthStateChanged, OAuthCredential } from "firebase/auth";
+// import { onAuthStateChanged, OAuthCredential } from "firebase/auth";
 import { AiFillHome } from "react-icons/ai";
 import { MdEmojiEvents } from "react-icons/md";
 import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
 import { useRouter } from "next/router";
 import PersonIcon from '@mui/icons-material/Person';
-import { signOut ,sendEmailVerification} from "@firebase/auth";
+// import { signOut ,sendEmailVerification} from "@firebase/auth";
 import { toast, ToastOptions } from "react-toastify";
 function Navbar() {
   const toastOptions: ToastOptions = {
@@ -29,27 +28,27 @@ function Navbar() {
   const [active, setActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    return onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        const token = await user.getIdToken();
-        localStorage.setItem("accessToken", token);
+  // useEffect(() => {
+  //   return onAuthStateChanged(auth, async (user) => {
+  //     if (user) {
+  //       const token = await user.getIdToken();
+  //       localStorage.setItem("accessToken", token);
 
-        // refresh token after every 5 minute
-        setTimeout(async () => {
-          const token = await user.getIdToken();
-          localStorage.setItem("accessToken", token);
-        }, 5*60*1000);
-        if(!auth.currentUser)signOut(auth);
+  //       // refresh token after every 5 minute
+  //       setTimeout(async () => {
+  //         const token = await user.getIdToken();
+  //         localStorage.setItem("accessToken", token);
+  //       }, 5*60*1000);
+  //       if(!auth.currentUser)signOut(auth);
          
-        if(auth.currentUser?.emailVerified)setActive(true);
+  //       if(auth.currentUser?.emailVerified)setActive(true);
 
-      } else {
-        localStorage.removeItem("accessToken");
-        setActive(false);
-      }
-    });
-  }, [auth.currentUser?.emailVerified]);
+  //     } else {
+  //       localStorage.removeItem("accessToken");
+  //       setActive(false);
+  //     }
+  //   });
+  // }, [auth.currentUser?.emailVerified]);
 
 
   useEffect(() => {
@@ -68,7 +67,6 @@ function Navbar() {
 
   const handlelogout = () => {
     if (active) {
-      auth.signOut();
       localStorage.removeItem("login");
     }
   };

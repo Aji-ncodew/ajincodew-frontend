@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import RegisterationForm from "../../../Components/RegistrationForm/RegistrationForm";
+// import RegisterationForm from "../../../Components/RegistrationForm/RegistrationForm";
 
 function Register() {
   const router = useRouter();
@@ -16,7 +16,7 @@ function Register() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <RegisterationForm eventName={eventName} />
+      {/* <RegisterationForm eventName={eventName} /> */}
     </>
   );
 }
