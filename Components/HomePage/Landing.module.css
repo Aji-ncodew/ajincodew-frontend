@@ -38,10 +38,15 @@
   height: 100%;
 }
 
-.cross {
+.cross1 {
   position: absolute;
   width: 450px;
-  clip-path: polygon(1% 0, 35% 0, 100% 100%, 65% 100%);
+  clip-path: polygon(30% 0, 60% 0, 100% 100%, 65% 100%);
+}
+.cross2 {
+  position: absolute;
+  width: 450px;
+  clip-path: polygon(60% 0, 30% 0, 0% 100%, 30% 100%);
 }
 
 @media (max-width: 1160px) {
