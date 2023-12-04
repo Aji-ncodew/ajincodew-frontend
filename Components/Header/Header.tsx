@@ -77,7 +77,7 @@ function Navbar() {
     <div className={classes.container + (isScrolled ? " " + classes.scrolled : "")}>
       <div className={classes.header}>
         <Link href="/" className={classes.logo}>
-          <Image src={NSCCLogo} alt="NSCC Logo" width={250}/>
+          <Image src={NSCCLogo} alt="NSCC Logo" width={80}/>
         </Link>
       </div>
       <div className={classes.navigators}>
