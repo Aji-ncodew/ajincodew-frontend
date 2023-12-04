@@ -28,29 +28,6 @@ function Navbar() {
   const [active, setActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // useEffect(() => {
-  //   return onAuthStateChanged(auth, async (user) => {
-  //     if (user) {
-  //       const token = await user.getIdToken();
-  //       localStorage.setItem("accessToken", token);
-
-  //       // refresh token after every 5 minute
-  //       setTimeout(async () => {
-  //         const token = await user.getIdToken();
-  //         localStorage.setItem("accessToken", token);
-  //       }, 5*60*1000);
-  //       if(!auth.currentUser)signOut(auth);
-         
-  //       if(auth.currentUser?.emailVerified)setActive(true);
-
-  //     } else {
-  //       localStorage.removeItem("accessToken");
-  //       setActive(false);
-  //     }
-  //   });
-  // }, [auth.currentUser?.emailVerified]);
-
-
   useEffect(() => {
     const scrollHandler = () => {
       const offset = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -75,7 +52,7 @@ function Navbar() {
     <div className={classes.container + (isScrolled ? " " + classes.scrolled : "")}>
       <div className={classes.header}>
         <Link href="/" className={classes.logo}>
-          <Image src={NSCCLogo} alt="NSCC Logo" width={250}/>
+          <Image src={NSCCLogo} alt="NSCC Logo" width={100}/>
         </Link>
       </div>
       <div className={classes.navigators}>
@@ -88,19 +65,13 @@ function Navbar() {
               <label style={{ cursor: "pointer" }}>Home</label>
             </Link>
           </li>
-          {/* <li>
-            <Link href="/">Opportunities</Link>
-          </li>
           <li>
-            <Link href="/">Resources</Link>
-          </li> */}
-          <li>
-            <Link href="/events">
+            {/* <Link href="/events"> */}
               <div className={classes.icons}>
                 <MdEmojiEvents />
               </div>
               <label style={{ cursor: "pointer" }}>Events</label>
-            </Link>
+            {/* </Link> */}
           </li>
           <li>
             <Link href="/team">
@@ -110,22 +81,19 @@ function Navbar() {
               <label style={{ cursor: "pointer" }}>Team</label>
             </Link>
           </li>
-          {/* <li>
-            <Link href="/">Connect</Link>
-          </li> */}
           <li>
-            <Link
+            {/* <Link
               onClick={handlelogout}
               className={classes.button}
               href={`/auth?redirect=${router.asPath.split('?')[0]}`}
-              >
+              > */}
               <div className={classes.icons}>
                 {active ? <RiLogoutCircleFill /> : <RiLoginCircleFill />}
               </div>
 
               <label  className={classes.button} style={{ cursor: "pointer" }} >{active ? "logout" : "login"}</label>
 
-            </Link>
+            {/* </Link> */}
             
           </li>
         </ul>

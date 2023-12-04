@@ -64,7 +64,7 @@ function Event() {
   return (
     <>
       <Head>
-        <title>Praxis CodeWars | Newton School Coding Club | Pimpri Chinchwad College of Engineering</title>
+        <title>Aji ncodew</title>
         <meta name="description" content="Codehive coding contest" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

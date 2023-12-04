@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Newton School Coding Club | Pimpri Chinchwad College of Engineering
+        Aji ncodew
         </title>
         <meta name="description" content="NSCC Home page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
