@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Landing from "../Components/HomePage/Landing";
 
+// index
 // import { Inter } from '@next/font/google'
 
 import { useState, useEffect } from "react";
