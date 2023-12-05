@@ -11,7 +11,7 @@ function LandingContent() {
       </div>
       <div className={classes.title}>
         <h1>
-          <span className={`flag-icon flag-icon-ma ${classes.flagIcon}`}></span> IT community
+           IT community
         </h1>
       </div>
       <div className={classes.college}>
