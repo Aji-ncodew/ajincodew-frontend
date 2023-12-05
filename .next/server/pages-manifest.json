@@ -1,0 +1,15 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/events": "pages/events.html",
+  "/events/codehive": "pages/events/codehive.html",
+  "/events/codewars": "pages/events/codewars.html",
+  "/events/register/[eventName]": "pages/events/register/[eventName].html",
+  "/events/webxplore/submissions": "pages/events/webxplore/submissions.html",
+  "/events/webxplore": "pages/events/webxplore.html",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.html",
+  "/team": "pages/team.html",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
+}
